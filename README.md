@@ -76,9 +76,9 @@ print("Number of rows:", len(VisComm))
 
 # **B. VISAYAS FEMALE DATAFRAME**
 
-This problem creates a DataFrame named `VisW` containing students whose Hometown is Visayas and whose Gender is Female. It retains only the Name, Track, GEAS, Electronics, and Average columns.
+This problem creates a DataFrame named `VisFemale` containing students whose Hometown is Visayas and whose Gender is Female. It retains only the Name, Track, GEAS, Electronics, and Average columns.
 
-The resulting `VisW` DataFrame is then filtered to display students whose Average is at least 60 without overwriting the original DataFrame.
+The resulting `VisFemale` DataFrame is then filtered to display students whose Average is at least 60 without overwriting the original DataFrame.
 
 The functions, operators, and methods used for this are the following:
 
@@ -86,24 +86,24 @@ The functions, operators, and methods used for this are the following:
 - `bdf["Gender"] == "Female"` - Creates a condition that selects female students.
 - `&` - Requires both conditions to be true.
 - `["Name", "Track", "GEAS", "Electronics", "Average"]` - Retains only the required columns.
-- `VisW` - Stores the resulting filtered DataFrame.
-- `VisW["Average"] >= 60` - Checks which students have an Average greater than or equal to 60.
-- `VisW[VisW["Average"] >= 60]` - Displays only the students who meet the Average requirement without changing `VisW`.
+- `VisFemale` - Stores the resulting filtered DataFrame.
+- `VisFemale["Average"] >= 60` - Checks which students have an Average greater than or equal to 60.
+- `VisFemale[VisFemale["Average"] >= 60]` - Displays only the students who meet the Average requirement without changing `VisW`.
 
 ```Python
-#Create a Dataframe named VisW with the following conditions: The student must be in Visayas and must be a Female
-VisW = bdf[(bdf["Hometown"] == "Visayas") &
+#Create a Dataframe named VisFemale with the following conditions: The student must be in Visayas and must be a Female
+VisFemale = bdf[(bdf["Hometown"] == "Visayas") &
           (bdf["Gender"] == "Female")][
 #After filtering, retain only the required columns in the order:
           ["Name", "Track", "GEAS", "Electronics", "Average"]]
 
 #Display Dataframe
-VisW
+VisFemale
 ```
 
 ```Python
-#Display VisW students with an Average of atleast 60 and above
-VisW[VisW["Average"] >= 60]
+#Display VisFemale students with an Average of atleast 60 and above
+VisFemale[VisFemale["Average"] >= 60]
 ```
 
 # **C. CATEGORY-AVERAGE VISUALIZATION**
